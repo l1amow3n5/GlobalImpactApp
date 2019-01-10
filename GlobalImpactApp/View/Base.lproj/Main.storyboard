@@ -17,32 +17,50 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="N9e-BN-hZy">
-                                <rect key="frame" x="0.0" y="20" width="375" height="291"/>
-                            </mapView>
-                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DVe-k7-2XN">
-                                <rect key="frame" x="114" y="326" width="146" height="46"/>
-                                <state key="normal" title="Button"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DVe-k7-2XN">
+                                <rect key="frame" x="114" y="352" width="147" height="46"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="46" id="Scr-uK-J49"/>
+                                </constraints>
+                                <state key="normal" title="Go To Location"/>
                                 <connections>
                                     <action selector="MapButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="hm4-0B-OLb"/>
                                 </connections>
                             </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="eIC-2T-b0a">
-                                <rect key="frame" x="0.0" y="380" width="375" height="137"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Image" translatesAutoresizingMaskIntoConstraints="NO" id="eIC-2T-b0a">
+                                <rect key="frame" x="0.0" y="406" width="375" height="137"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="137" id="WNS-xB-SXY"/>
+                                </constraints>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gU5-ZU-LpA">
-                                <rect key="frame" x="0.0" y="531" width="375" height="116"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gU5-ZU-LpA">
+                                <rect key="frame" x="0.0" y="551" width="375" height="116"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="116" id="CPo-UA-RSz"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="N9e-BN-hZy">
+                                <rect key="frame" x="0.0" y="53" width="375" height="291"/>
+                            </mapView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="N9e-BN-hZy" firstAttribute="width" secondItem="6Tk-OE-BBY" secondAttribute="width" id="Drq-f6-P0a"/>
-                            <constraint firstItem="DVe-k7-2XN" firstAttribute="width" secondItem="6Tk-OE-BBY" secondAttribute="width" id="lSd-Yz-bci"/>
-                            <constraint firstItem="gU5-ZU-LpA" firstAttribute="width" secondItem="6Tk-OE-BBY" secondAttribute="width" id="nh1-6c-bJf"/>
+                            <constraint firstItem="N9e-BN-hZy" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="5v2-Tg-VYo"/>
+                            <constraint firstItem="N9e-BN-hZy" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="33" id="HJP-dS-VH7"/>
+                            <constraint firstItem="DVe-k7-2XN" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="114" id="HSj-QM-ye0"/>
+                            <constraint firstItem="gU5-ZU-LpA" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="I8v-dy-ag6"/>
+                            <constraint firstItem="eIC-2T-b0a" firstAttribute="leading" secondItem="gU5-ZU-LpA" secondAttribute="leading" id="K4J-Qv-hKL"/>
+                            <constraint firstItem="eIC-2T-b0a" firstAttribute="trailing" secondItem="gU5-ZU-LpA" secondAttribute="trailing" id="R9Y-FM-YrM"/>
+                            <constraint firstItem="gU5-ZU-LpA" firstAttribute="top" secondItem="eIC-2T-b0a" secondAttribute="bottom" constant="8" symbolic="YES" id="R9s-Xm-iQf"/>
+                            <constraint firstItem="eIC-2T-b0a" firstAttribute="top" secondItem="DVe-k7-2XN" secondAttribute="bottom" constant="8" symbolic="YES" id="SO5-Uh-ceT"/>
+                            <constraint firstAttribute="trailing" secondItem="N9e-BN-hZy" secondAttribute="trailing" id="XXr-TK-3Lc"/>
+                            <constraint firstItem="DVe-k7-2XN" firstAttribute="top" secondItem="N9e-BN-hZy" secondAttribute="bottom" constant="8" symbolic="YES" id="ahm-u7-RDz"/>
+                            <constraint firstItem="N9e-BN-hZy" firstAttribute="leading" secondItem="eIC-2T-b0a" secondAttribute="leading" id="kTn-Sc-auE"/>
+                            <constraint firstItem="N9e-BN-hZy" firstAttribute="trailing" secondItem="eIC-2T-b0a" secondAttribute="trailing" id="oDz-0j-V8k"/>
+                            <constraint firstItem="DVe-k7-2XN" firstAttribute="centerX" secondItem="eIC-2T-b0a" secondAttribute="centerX" id="rwm-LK-h8G"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
@@ -55,4 +73,7 @@
             <point key="canvasLocation" x="133.59999999999999" y="133.5832083958021"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="Image" width="335" height="512"/>
+    </resources>
 </document>
