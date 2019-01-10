@@ -23,6 +23,9 @@
                             <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DVe-k7-2XN">
                                 <rect key="frame" x="114" y="326" width="146" height="46"/>
                                 <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="MapButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="hm4-0B-OLb"/>
+                                </connections>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="eIC-2T-b0a">
                                 <rect key="frame" x="0.0" y="380" width="375" height="137"/>
@@ -43,6 +46,9 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="MapView" destination="N9e-BN-hZy" id="CqF-3h-suM"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
